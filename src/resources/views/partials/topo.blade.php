@@ -13,7 +13,28 @@
 
          <li><a class="" href="{{ route('sobre') }}">Sobre</a></li>
 
-         <li><a class="" href="{{ route('cardapio') }}">Cardápio</a></li>
+         <li class="item-submenu"><a class="" href="{{ route('cardapio') }}">Cardápio</a>
+
+          <!-- submenu -->
+        <ul class="submenu">
+          @foreach($categoriaMenu as $linha)
+
+
+
+            <li>
+
+              <a href="{{route ('cardapio.categoria',$linha->id_categoria) }}">{{$linha->nome_categoria}}</a>
+
+            </li>
+
+            @endforeach
+
+          </ul>
+
+          <!--fim submenu -->
+        
+        
+        </li> <!--fim cardápio -->
 
          <li><a class="" href="{{ route('eventos') }}">Eventos</a></li>
 

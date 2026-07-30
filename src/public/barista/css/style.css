@@ -156,6 +156,76 @@ p {
     text-indent: -9999px;
 }
 
+/* Item que possui submenu */
+.menu .item-submenu {
+    position: relative;
+}
+ 
+/* Submenu fechado */
+.menu .item-submenu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+ 
+    display: flex;
+    flex-direction: column;
+ 
+    min-width: 220px;
+    padding: 10px 0;
+    margin: 0;
+ 
+    background-color: #0b0b0b;
+    border-radius: 0 0 8px 8px;
+ 
+    list-style: none;
+ 
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+ 
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+ 
+    z-index: 1000;
+}
+ 
+/* Abre o submenu ao passar o mouse */
+.menu .item-submenu:hover .submenu,
+.menu .item-submenu:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+ 
+/* Cada item do submenu */
+.menu .item-submenu .submenu li {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+ 
+/* Links do submenu */
+.menu .item-submenu .submenu li a {
+    display: block;
+    width: 100%;
+ 
+    padding: 12px 20px;
+    margin: 0;
+ 
+    color: #ffffff;
+    font-size: 17px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+ 
+/* Efeito ao passar o mouse */
+.menu .item-submenu .submenu li a:hover {
+    color: var(--cor-secundaria-2);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
 
 /* menu */
 
