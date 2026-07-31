@@ -12,7 +12,7 @@
             <ul>
                 @foreach($listaCategorias as $linha)
                 <li>
-                    <a href="{{route('cardapio.categoria',$linha->id_categoria)}}">{{$linha->nome_categoria}}</a>
+                    <a href=" {{route('cardapio.categoria',$linha->id_categoria)}} ">{{$linha->nome_categoria}}</a>
                 </li>
                 @endforeach
             </ul>
