@@ -11,18 +11,18 @@
         
         
         
+          <nav class="teste">
+            @foreach($listaCategorias as $linha)
+              <ul class="botao-categorias">
+                  <li>
+                      <a href=" {{route('cardapio.categoria',$linha->id_categoria)}} ">{{$linha->nome_categoria}}</a>
+                  </li>
+              </ul>
+            @endforeach
+          </nav>
+        
+        
       </header>
-      @foreach($listaCategorias as $linha)
-      <div class="controle-botao-cardapio">
-        <nav>
-            <ul class="botao-categorias">
-                <li>
-                    <a href=" {{route('cardapio.categoria',$linha->id_categoria)}} ">{{$linha->nome_categoria}}</a>
-                </li>
-            </ul>
-        </nav>
-      </div>
-          @endforeach
       <div class=" site card-cardapio">
 
         @foreach($produtos as $linha)
@@ -53,9 +53,9 @@
 
       </div>
       
-      <div class="site btn-cardapio">
+      <!-- <div class="site btn-cardapio">
         <a class="btn" href="#">Veja mais</a>
-      </div>
+      </div> -->
      
      </section>
 

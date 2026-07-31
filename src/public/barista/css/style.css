@@ -486,11 +486,11 @@ p {
 
 /* Estilo Padrão de botão */
 
-.controle-botao-cardapio{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+.teste{
+ display: flex;
+ gap: 25px;
 }
+
 
 .botao-categorias {
     text-decoration: none;
@@ -501,14 +501,19 @@ p {
     display: inline-block;
     transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
     font-family: var(--fonte-texto);
-    
+}
 
+.botao-categorias a{
+    color:var(--cor-texto);
+    font-family: var(--fonte-texto);
+    text-decoration: none;
+    font-size: 25px;
 }
 
 .botao-categorias:hover {
     background: var(--cor-secundaria-2);
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    transform: translateY(5px) scale(1.1);
+    box-shadow: 3px 13px 5px rgba(0, 0, 0, .5);
 }
 
 /* .btn-cardapio {
@@ -612,10 +617,10 @@ p {
 
 }
 
-.btn-cardapio {
+/*.btn-cardapio {
     display: flex;
     justify-content: end;
-}
+}*/
 
 /* EQUIPE-COMEÇO */
 .equipe div {
