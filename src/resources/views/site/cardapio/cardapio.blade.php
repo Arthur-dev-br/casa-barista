@@ -8,18 +8,21 @@
           Cardápio | {{$categoriaSelecionada->nome_categoria}}
         </h2>
 
+        
+        
+        
+      </header>
+      @foreach($listaCategorias as $linha)
+      <div class="controle-botao-cardapio">
         <nav>
-            <ul>
-                @foreach($listaCategorias as $linha)
+            <ul class="botao-categorias">
                 <li>
                     <a href=" {{route('cardapio.categoria',$linha->id_categoria)}} ">{{$linha->nome_categoria}}</a>
                 </li>
-                @endforeach
             </ul>
         </nav>
-
-
-      </header>
+      </div>
+          @endforeach
       <div class=" site card-cardapio">
 
         @foreach($produtos as $linha)

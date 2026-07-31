@@ -83,7 +83,7 @@ p {
 
 .parallax-padrao:before {
     content: "";
-    position: absolute;
+    position: relative;
     inset: 0;
     background: rgba (0, 0, 0, .5);
 }
@@ -483,6 +483,39 @@ p {
 
 
 /* Cardápio */
+
+/* Estilo Padrão de botão */
+
+.controle-botao-cardapio{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.botao-categorias {
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    background-color: var(--cor-fundo-1);
+    color: var(--cor-fundo-1);
+    display: inline-block;
+    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
+    font-family: var(--fonte-texto);
+    
+
+}
+
+.botao-categorias:hover {
+    background: var(--cor-secundaria-2);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+/* .btn-cardapio {
+    text-align: right;
+    margin: 30px auto 50px auto;
+} */
+
 
 .cardapio .card-cardapio {
     display: flex;
