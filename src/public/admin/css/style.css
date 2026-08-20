@@ -1,4 +1,59 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: "Geometry Soft Pro-Bold N";
+    src: url(../fonts/Geometry\ Soft\ Pro-Bold\ N.otf) format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+:root {
+
+    /* Cores */
+    --cor-fundo-1: #f3e8dc;
+    --cor-fundo-2: #2e2e2e;
+    --cor-primaria: #4a2c19;
+    --cor-secundaria-1: #8b5e3c;
+    --cor-secundaria-2: #5c6945;
+    --cor-destaque: #b56a34;
+
+    --cor-texto: #2e2e2e;
+    --cor-titulo: #4a2c19;
+    --cor-subtitulo: #8b5e3c;
+
+
+    /* Fontes */
+
+    --fonte-texto: "Bebas Neue", sans-serif;
+    --fonte-titulo: "Geometry Soft Pro-Bold N";
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 30px;
+    color: var(--cor-titulo);
+    font-weight: bold;
+}
+
+h3 {
+    font-family: var(--fonte-texto);
+    color: var(--cor-secundaria-1);
+    font-size: 20px;
+}
+
+p {
+    font-family: var(--fonte-texto);
+    color: var(--cor-destaque);
+    font-size: 15px;
+}
+
+.sidebar-menu .nav-header{
+    font-family: var(--fonte-texto);
+}
+
+
 .app-sidebar{
     background:#0b0b0b !important;
 
@@ -11,3 +66,8 @@
   width: 150px;
   max-height: none;
 }
+
+
+
+
+

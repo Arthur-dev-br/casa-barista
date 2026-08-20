@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <!--begin::Head-->
   <head>
   @include ('partials.admin.head')

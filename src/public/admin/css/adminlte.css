@@ -13493,7 +13493,7 @@ textarea.form-control-lg {
     height: 100%;
     cursor: pointer;
     visibility: visible;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 8, 8, 0.957);
     animation-name: fadeIn;
     animation-fill-mode: both;
   }
@@ -14651,6 +14651,7 @@ html.maximized-card {
 }
 .small-box h3, .small-box .h3 {
   font-size: calc(1.345rem + 1.14vw);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 @media (min-width: 1200px) {
   .small-box h3, .small-box .h3 {
@@ -14662,6 +14663,7 @@ html.maximized-card {
   margin: 0 0 10px;
   font-weight: 700;
   white-space: nowrap;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 @media (min-width: 992px) {
   .col-xl-2 .small-box h3, .col-xl-2 .small-box .h3, .col-lg-2 .small-box h3, .col-lg-2 .small-box .h3, .col-md-2 .small-box h3, .col-md-2 .small-box .h3 {
@@ -14705,12 +14707,14 @@ html.maximized-card {
 }
 .small-box p {
   font-size: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .small-box p > small, .small-box p > .small {
   display: block;
   margin-top: 5px;
   font-size: 0.9rem;
   color: #f8f9fa;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .small-box h3, .small-box .h3,
 .small-box p {
