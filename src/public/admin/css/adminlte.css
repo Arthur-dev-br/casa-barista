@@ -5,6 +5,31 @@
  *   Website: AdminLTE.io <https://adminlte.io>
  *   License: Open source - MIT <https://opensource.org/licenses/MIT>
  */
+
+
+
+ :root {
+
+    /* Cores */
+    --cor-fundo-1: #f3e8dc;
+    --cor-fundo-2: #2e2e2e;
+    --cor-primaria: #4a2c19;
+    --cor-secundaria-1: #8b5e3c;
+    --cor-secundaria-2: #5c6945;
+    --cor-destaque: #b56a34;
+
+    --cor-texto: #2e2e2e;
+    --cor-titulo: #4a2c19;
+    --cor-subtitulo: #8b5e3c;
+
+
+    /* Fontes */
+
+    --fonte-texto: "Bebas Neue", sans-serif;
+    --fonte-titulo: "Geometry Soft Pro-Bold N";
+}
+
+ /* TEMA CLARO ESTILO */
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -126,15 +151,36 @@
   --bs-form-invalid-border-color: #dc3545;
 }
 
+
+
+/* TEMA ESCURO ESTILO */
 [data-bs-theme=dark] {
   color-scheme: dark;
-  --bs-body-color: #dee2e6;
-  --bs-body-color-rgb: 222, 226, 230;
-  --bs-body-bg: #212529;
-  --bs-body-bg-rgb: 33, 37, 41;
+  /* H1 STYLE */
+  --bs-body-color: var(--cor-primaria);
+  /* ------------ */
+
+  /* BRILHO/SOMBRA DOS CARDS STYLE  */
+  --bs-body-color-rgb:var(--cor-fundo-2);
+  /* ----------------------------------- */
+
+  /* RODAPÉ STYLE */
+  --bs-body-bg: #0b0b0b;
+  /* ---------------- */
+
+  /* TOPO STYLE */
+  --bs-body-bg-rgb: 0, 0, 0;
+  /* -------------------- */
+
   --bs-emphasis-color: #fff;
-  --bs-emphasis-color-rgb: 255, 255, 255;
-  --bs-secondary-color: rgba(222, 226, 230, 0.75);
+  /* COR DOS TEXTOS DO TOPO */
+  --bs-emphasis-color-rgb: 181, 106, 52;
+  /* ----------------------------- */
+
+  /* COR DOS TEXTOS MENORES */
+  --bs-secondary-color: var(--cor-secundaria-1);
+  /* --------------------------- */
+
   --bs-secondary-color-rgb: 222, 226, 230;
   --bs-secondary-bg: #343a40;
   --bs-secondary-bg-rgb: 52, 58, 64;
@@ -194,9 +240,11 @@
   }
 }
 
+/* PAGINA STYLE */
+
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: var(--fonte-texto);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -8953,13 +9001,16 @@ textarea.form-control-lg {
 
 .bg-body-secondary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #0b0b0b !important;
 }
 
+
+/* COR DO FUNDO DASH */
 .bg-body-tertiary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--cor-fundo-1) !important;
 }
+/* --------------------- */
 
 .bg-opacity-10 {
   --bs-bg-opacity: 0.1;
@@ -13902,10 +13953,13 @@ body:not(.app-loaded) .app-footer {
   margin-bottom: 0;
   line-height: 2.5rem;
 }
+
+ /* TEXTO DO CANTO SUPERIOR DIREITO SLA O NOME */
 .app-main .app-content-header .breadcrumb a {
-  color: var(--bs-link-hover-color);
+  color: var(--cor-primaria);
   text-decoration: none;
 }
+
 .app-main .app-content-top-area,
 .app-main .app-content-bottom-area {
   color: var(--bs-secondary-color);
