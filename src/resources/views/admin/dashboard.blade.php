@@ -1,4 +1,3 @@
-
 @extends('layout.dashboard')
 
 
@@ -10,4 +9,3 @@
 
 
 @endsection
-

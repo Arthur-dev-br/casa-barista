@@ -4,7 +4,7 @@
                 <!--begin::Small Box Widget 1-->
                 <div class="small-box text-bg-primary">
                   <div class="inner">
-                    <h3>150</h3>
+                    <h3>{{$qtdeClientes}}</h3>
 
                     <p>New Orders</p>
                   </div>
@@ -91,7 +91,7 @@
                 <!--begin::Small Box Widget 4-->
                 <div class="small-box text-bg-danger">
                   <div class="inner">
-                    <h3>65</h3>
+                    <h3>R$ {{number_format($valorTotalVendas, 2, ',', '.')}}</h3>
 
                     <p>Unique Visitors</p>
                   </div>

@@ -19,4 +19,4 @@ Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 
 // conteudo dashboard
 
-Route::get('/dash', [AdminController::class, 'admin'])->name('admin'); 
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
