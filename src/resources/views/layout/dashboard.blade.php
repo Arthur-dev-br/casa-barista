@@ -24,7 +24,7 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Dashboard</h1>
+                <h1 class="mb-0 fs-3 testes">Dashboard</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
@@ -45,7 +45,7 @@
           <!--begin::Container-->
           <div class="container-fluid">
             <!--begin::Row-->
-            @include('admin.cards')
+            
             <!--end::Row-->
             <!--begin::Row-->
 

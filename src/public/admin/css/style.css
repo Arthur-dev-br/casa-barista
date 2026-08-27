@@ -26,8 +26,13 @@
 
     /* Fontes */
 
-    --fonte-texto: "Bebas Neue", sans-serif;
+    --fonte-texto: "Bebas Neue";
     --fonte-titulo: "Geometry Soft Pro-Bold N";
+}
+
+h1{
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
 }
 
 h2 {
