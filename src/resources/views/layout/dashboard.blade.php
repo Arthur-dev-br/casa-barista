@@ -45,7 +45,7 @@
           <!--begin::Container-->
           <div class="container-fluid">
             <!--begin::Row-->
-            @include('admin.dashboard.cards')
+            @include('admin.cards')
             <!--end::Row-->
             <!--begin::Row-->
 

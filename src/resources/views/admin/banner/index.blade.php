@@ -1,9 +1,7 @@
-@extends ('layout.dashboard')
+@extends('layout.dashboard')
 
+@section('content')
 
-@section ('content')
-
-@include('')
-
+    @include('admin.banner.listarBanner')
 
 @endsection

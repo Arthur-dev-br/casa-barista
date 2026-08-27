@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use GuzzleHttp\Promise\Create;
+
 use Illuminate\Database\Eloquent\Model;
 
 Class cliente extends Model
@@ -29,5 +29,11 @@ Class cliente extends Model
         return $this->hasMany(Depoimento::class, 'id_cliente', 'id_cliente');
     }
 
+   
+
+    public function ClienteVenda(){
+        return $this->hasMany(Venda::class, 'id_cliente', 'id_cliente');
+
+}
 }
 

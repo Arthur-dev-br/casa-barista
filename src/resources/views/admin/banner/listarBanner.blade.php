@@ -79,7 +79,7 @@
                           <tr>
                             
                             <td>
-                              {{$banner->$id_banner}}
+                              {{$banner->id_banner}}
                             </td>
 
                             <td>alexander.pierce@example.com</td>

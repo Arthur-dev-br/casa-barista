@@ -75,8 +75,8 @@
 
               <li class="nav-header">SITE</li>
               <li class="nav-item">
-                <a href="{{route('admin.banner.index') }}" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
+                <a href="{{ route('admin.banner.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
                   <p>Users</p>
                 </a>
               </li>
