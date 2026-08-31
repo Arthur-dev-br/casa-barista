@@ -8,6 +8,8 @@ use App\Http\Controllers\Site\SobreController;
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\GaleriaController;
+
 
 
 use Illuminate\Support\Facades\Route;
@@ -26,3 +28,4 @@ Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 //Estrutura para a área administrativa
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 Route::get('/admin/banners', [BannerController::class, 'index'])->name('admin.banner.index');
+Route::get('/admin/galeria', [GaleriaController::class, 'index'])->name('admin.galeria.index');

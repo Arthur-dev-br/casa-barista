@@ -77,14 +77,14 @@
               <li class="nav-item">
                 <a href="{{ route('admin.banner.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-circle-fill"></i>
-                  <p>Users</p>
+                  <p>Banners</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Users</p>
+                <a href="{{route('admin.galeria.index')}}" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Galeria</p>
                 </a>
               </li>
 

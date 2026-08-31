@@ -36,7 +36,7 @@
         
         </li> <!--fim cardápio -->
 
-         <li><a class="" href="{{ route('eventos') }}">Eventos</a></li>
+        
 
          <li><a class="" href="{{ route('contato') }}">Contato</a></li>
 

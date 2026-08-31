@@ -6,13 +6,13 @@
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h1 class="mb-0 fs-3">Banners</h1>
+                <h1 class="mb-0 fs-3">Galeria</h1>
               </div>
               <div class="col-sm-6">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Banners</li>
+                    <li class="breadcrumb-item active" aria-current="page">Galeria</li>
                   </ol>
                 </nav>
               </div>
@@ -75,19 +75,19 @@
                           </tr>
                         </thead>
                         <tbody>
-                        @forelse($listaBanner as $banner)
+                        @forelse($listaGaleria as $galeria)
                           <tr>
                             
                             <td>
-                              {{$banner->id_banner}}
+                              {{$galeria->id_galeria}}
                             </td>
 
                             <td>alexander.pierce@example.com</td>
                             <td>
 
-                             @if($banner->imagem_banner)
-                              <img src= "{{ asset('barista/img' . $banner->imagem_banner) }}"
-                                    alt="{{$banner->titulo_banner }}"
+                             @if($galeria->imagem_galeria)
+                              <img src= "{{ asset('barista/img' . $galeria->imagem_galeria) }}"
+                                    alt="{{$galeria->nome_galeria }}"
                                     class = "rounded"
                                     style="
                                         width:100px;
