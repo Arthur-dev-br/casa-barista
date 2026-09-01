@@ -96,12 +96,9 @@
                                     "
                               >
                                 @else
-                                <span>
-
-
-
-
-                                </span>
+                                    <span class="text-muted">
+                                        Sem imagem
+                                    </span>
 
                              @endif
 

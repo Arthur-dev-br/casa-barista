@@ -82,7 +82,10 @@
                               {{$galeria->id_galeria}}
                             </td>
 
-                            <td>alexander.pierce@example.com</td>
+                            <td>alexander.pierce@example.com
+
+                              
+                            </td>
                             <td>
 
                              @if($galeria->imagem_galeria)
@@ -96,12 +99,9 @@
                                     "
                               >
                                 @else
-                                <span>
-
-
-
-
-                                </span>
+                                    <span class="text-muted">
+                                        Sem imagem
+                                    </span>
 
                              @endif
 
