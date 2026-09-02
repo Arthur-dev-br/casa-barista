@@ -71,7 +71,7 @@
                             <th scope="col">Titulo</th>
                             <th scope="col">Status</th>
                             
-                            <th class="text-end" scope="col">Ações</th>
+                            <th class="col" scope="col">Data</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -82,19 +82,14 @@
                               {{$galeria->id_galeria}}
                             </td>
 
-                            <td>alexander.pierce@example.com
-
-                              
-                            </td>
                             <td>
-
-                             @if($galeria->imagem_galeria)
-                              <img src= "{{ asset('barista/img' . $galeria->imagem_galeria) }}"
+                              @if($galeria->imagem_galeria)
+                              <img src= "{{ asset('barista/assets/' . $galeria->imagem_galeria) }}"
                                     alt="{{$galeria->nome_galeria }}"
                                     class = "rounded"
                                     style="
-                                        width:100px;
-                                        height:60px;
+                                        width:140px;
+                                        height:90px;
                                         object-fit:cover;
                                     "
                               >
@@ -103,16 +98,40 @@
                                         Sem imagem
                                     </span>
 
+                             @endif</td>
+                              
+                            </td>
+                            <td>
+                              @if($galeria->nome_galeria)
+                              <span>
+                                {{$galeria->nome_galeria}}
+                              </span>
+                             
+                                @else
+                                    <span class="text-muted">
+                                        Sem imagem
+                                    </span>
+
                              @endif
+                            </td>
+                            <td>
+                               @if ($galeria->status_galeria)
+                              <span class="badge text-bg-success">{{$galeria->status_galeria}}</span>
+
+                                @else
+                                <span class="badge text-bg-success">INATIVO</span>
 
 
 
+
+                              @endif
 
                             </td>
                             <td>
-                              <span class="badge text-bg-success">ATIVO</span>
+                              <span>
+                                {{$galeria->data_criacao_galeria }} / {{$galeria->data_atualizacao_galeria}}
+                              </span>
                             </td>
-                            <td>Mar 12, 2025</td>
                             <td class="text-end">
                               <div class="btn-group btn-group-sm">
                                 <button type="button" class="btn btn-outline-secondary" aria-label="Edit Alexander Pierce">

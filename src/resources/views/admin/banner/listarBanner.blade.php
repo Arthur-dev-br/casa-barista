@@ -70,8 +70,7 @@
                             <th scope="col">Imagem</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Status</th>
-                            
-                            <th class="text-end" scope="col">Ações</th>
+                            <th class="col" scope="col">Data</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -82,19 +81,29 @@
                               {{$banner->id_banner}}
                             </td>
 
-                            <td>alexander.pierce@example.com</td>
-                            <td>
-
-                             @if($banner->imagem_banner)
-                              <img src= "{{ asset('barista/img' . $banner->imagem_banner) }}"
+                            <td>@if($banner->imagem_banner)
+                              <img src= "{{ asset('barista/assets/' . $banner->imagem_banner) }}"
                                     alt="{{$banner->titulo_banner }}"
                                     class = "rounded"
                                     style="
-                                        width:100px;
-                                        height:60px;
+                                        width:140px;
+                                        height:90px;
                                         object-fit:cover;
                                     "
                               >
+                                @else
+                                    <span class="text-muted">
+                                        Sem imagem
+                                    </span>
+
+                             @endif</td>
+                            <td>
+
+                             @if($banner->titulo_banner)
+                              <span>
+                                {{$banner->titulo_banner}}
+                              </span>
+                             
                                 @else
                                     <span class="text-muted">
                                         Sem imagem
@@ -107,9 +116,25 @@
 
                             </td>
                             <td>
-                              <span class="badge text-bg-success">ATIVO</span>
+                              @if ($banner->status_banner)
+                              <span class="badge text-bg-success">{{$banner->status_banner}}</span>
+
+                                @else
+                                <span class="badge text-bg-success">INATIVO</span>
+
+
+
+
+                              @endif
+
+                              
                             </td>
-                            <td>Mar 12, 2025</td>
+                            <td>
+                              <span>
+                                {{$banner->data_criacao_banner }} / {{$banner->data_atualizacao_banner}}
+                              </span>
+
+                            </td>
                             <td class="text-end">
                               <div class="btn-group btn-group-sm">
                                 <button type="button" class="btn btn-outline-secondary" aria-label="Edit Alexander Pierce">
@@ -121,7 +146,7 @@
                               </div>
                             </td>
                           </tr>
-                        @empty
+                          @empty
                           <tr>
                             <td>
                               <div class="d-flex align-items-center">
@@ -159,7 +184,9 @@
                   <!--begin::Card Footer-->
                   <div class="card-footer clearfix">
                     <div class="float-start pt-1 fs-7 text-body-secondary">
-                      Showing 1 to 9 of 42 users
+                      <span>
+                        Pagina 1 de 9 de {{$banner->Count()}} registros
+                      </span>
                     </div>
                     <ul class="pagination pagination-sm m-0 float-end">
                       <li class="page-item disabled">

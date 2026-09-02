@@ -10,7 +10,7 @@ class BannerController extends Controller
     // Listar todos os banners cadastrados
     public function index()
     {
-        $listaBanner = Banner::orderByDesc('id_banner')->get();
+        $listaBanner = Collect();
 
         return view('admin.banner.index', compact('listaBanner'));
     }

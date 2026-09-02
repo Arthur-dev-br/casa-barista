@@ -502,7 +502,10 @@ th {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
+  text-align: center;
 }
+
+
 
 label {
   display: inline-block;
@@ -4844,11 +4847,11 @@ textarea.form-control-lg {
   --bs-pagination-font-size: 0.875rem;
   --bs-pagination-border-radius: var(--bs-border-radius-sm);
 }
-
+/* BADGE 'ATIVO'*/
 .badge {
   --bs-badge-padding-x: 0.65em;
   --bs-badge-padding-y: 0.35em;
-  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-size: 15px;
   --bs-badge-font-weight: 700;
   --bs-badge-color: #fff;
   --bs-badge-border-radius: var(--bs-border-radius);
