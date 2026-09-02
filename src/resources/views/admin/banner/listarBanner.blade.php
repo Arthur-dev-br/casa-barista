@@ -148,30 +148,10 @@
                           </tr>
                           @empty
                           <tr>
-                            <td>
-                              <div class="d-flex align-items-center">
-                                <img src="./assets/img/user3-128x128.jpg" alt="" class="img-size-32 rounded-circle me-2">
-                                <span class="fw-medium">Sarah Bullock</span>
-                              </div>
-                            </td>
-                            <td>sarah.bullock@example.com</td>
-                            <td>
-                              <span class="badge text-bg-primary">Editor</span>
-                            </td>
-                            <td>
-                              <span class="badge text-bg-success">Ativo</span>
-                            </td>
-                            <td>Apr 3, 2025</td>
-                            <td class="text-end">
-                              <div class="btn-group btn-group-sm">
-                                <button type="button" class="btn btn-outline-secondary" aria-label="Edit Sarah Bullock">
-                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
-                                </button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-delete-user" aria-label="Delete Sarah Bullock">
-                                  <i class="bi bi-trash" aria-hidden="true"> </i>
-                                </button>
-                              </div>
-                            </td>
+                            
+                            <td>Nenhum registro encontrado!</td>
+                           
+                            
                           </tr>
                          
                         @endforelse
