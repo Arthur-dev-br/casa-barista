@@ -109,11 +109,12 @@
               </li>
 
               <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Users</p>
+                <a href="{{route('admin.newsletter.index')}}" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Newsletter</p>
                 </a>
               </li>
+
             </ul>
             <!--end::Sidebar Menu-->
 

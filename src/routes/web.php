@@ -14,7 +14,7 @@ use App\Http\Controllers\Admin\CategoriaController;
 use App\Http\Controllers\Admin\ClienteController;
 use App\Http\Controllers\Admin\DepoimentoController;
 use App\Http\Controllers\Admin\LinhaTempoController;
-
+use App\Http\Controllers\Admin\NewsletterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -36,3 +36,4 @@ Route::get('/admin/categoria',[CategoriaController::class, 'index'])->name('admi
 Route::get('/admin/cliente',[ClienteController::class, 'index'])->name('admin.cliente.index');
 Route::get('/admin/depoimento',[DepoimentoController::class, 'index'])->name('admin.depoimento.index');
 Route::get('/admin/linhatempo',[LinhaTempoController::class, 'index'])->name('admin.linhatempo.index');
+Route::get('/admin/newsletter',[NewsletterController::class, 'index'])->name('admin.newsletter.index');
