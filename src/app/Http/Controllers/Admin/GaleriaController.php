@@ -7,7 +7,7 @@ use App\Models\Galeria;
 
 class GaleriaController extends Controller
 {
-    // Listar todos os banners cadastrados
+    // Listar todos as imagens da galeria cadastradas
     public function index()
     {
         $listaGaleria = Galeria::orderByDesc('id_galeria')->get();

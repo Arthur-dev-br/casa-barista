@@ -9,7 +9,7 @@ Class Galeria extends Model{
     protected $table = 'tbl_galeria';
     protected $primaryKey = 'id_galeria';
 
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = [
         'nome_galeria',
