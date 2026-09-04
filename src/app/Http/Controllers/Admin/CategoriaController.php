@@ -7,7 +7,7 @@ use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
-    // Listar todos as imagens da galeria cadastradas
+    // Listar todos as categorias cadastradas
     public function index()
     {
         $listaCategoria = Categoria::orderByDesc('id_categoria')->get();

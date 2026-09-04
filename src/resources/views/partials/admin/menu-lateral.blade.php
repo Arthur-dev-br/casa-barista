@@ -65,6 +65,13 @@
               </li>
 
               <li class="nav-item">
+                <a href="{{route('admin.cliente.index')}}" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Clientes</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
                 <a href="./users.html" class="nav-link">
                   <i class="nav-icon bi bi-people"></i>
                   <p>Users</p>
@@ -89,16 +96,15 @@
               </li>
 
               <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Users</p>
+                <a href="{{route('admin.depoimento.index')}}" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Depoimentos</p>
                 </a>
               </li>
-
               <li class="nav-item">
-                <a href="./users.html" class="nav-link">
-                  <i class="nav-icon bi bi-people"></i>
-                  <p>Users</p>
+                <a href="{{route('admin.linhatempo.index')}}" class="nav-link">
+                  <i class="nav-icon bi bi-circle-fill"></i>
+                  <p>Linha do tempo</p>
                 </a>
               </li>
 
