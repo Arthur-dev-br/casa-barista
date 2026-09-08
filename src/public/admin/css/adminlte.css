@@ -166,7 +166,7 @@
 [data-bs-theme=dark] {
   color-scheme: dark;
   /* H1 STYLE */
-  --bs-body-color: var(--cor-primaria);
+  --bs-body-color: var(--cor-secundaria-1);
   /* ------------ */
 
   /* BRILHO/SOMBRA DOS CARDS STYLE  */

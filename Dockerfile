@@ -1,3 +1,12 @@
 FROM php:8.4-fpm
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN apt-get update \
+    && apt-get install -y \
+        libxml2-dev \
+        unzip \
+        git \
+        curl \
+    && docker-php-ext-install pdo pdo_mysql dom \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
