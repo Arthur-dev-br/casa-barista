@@ -330,7 +330,7 @@
       </main>
       <!--end::App Main-->
 
-      /* JS do input banner: */
+      
 <script>
     const inputBanner = document.getElementById('img-banner');
     const previewBanner = document.getElementById('ver-banner');
