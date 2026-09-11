@@ -30,8 +30,34 @@ Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
 
 //Estrutura para a área administrativa
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-Route::get('/admin/banners', [BannerController::class, 'index'])->name('admin.banner.index');
-Route::get('/admin/galeria', [GaleriaController::class, 'index'])->name('admin.galeria.index');
+
+
+
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
+    // CRUD BANNER
+    Route::get('/banner', [BannerController::class, 'index'])->name('admin.banner.index'); //Lista Banner
+    Route::post('/banner', [BannerController::class, 'store'])->name('admin.banner.store');// Cadastrar Banner
+    Route::get('/banner/{id}/editar', [BannerController::class, 'edit'])->name('admin.banner.edit');//Abrir o form de Editar banner
+    //Quer que você mude tudo, senão dará erro
+    Route::put('/banner/{id}', [BannerController::class, 'update'])->name('admin.banner.update');//Atualizar Banner 
+    //Permite você mudar só um valor
+    Route::patch('/banner/{id}/status', [BannerController::class, 'status'])->name('admin.banner.status');//Ativar o Desativar Banner
+
+    // CRUD GALERIA
+    Route::get('/galeria', [GaleriaController::class, 'index'])->name('admin.galeria.index'); //Lista Galeria
+
+    // CRUD DEPOIMENTO
+
+    // CRUD LINHA DO TEMPO
+
+    // CRUD NEWSLETTER
+
+    // CRUD CLIENTE
+
+    // CRUD CATEGORIA
+
+
 Route::get('/admin/categoria',[CategoriaController::class, 'index'])->name('admin.categoria.index');
 Route::get('/admin/cliente',[ClienteController::class, 'index'])->name('admin.cliente.index');
 Route::get('/admin/depoimento',[DepoimentoController::class, 'index'])->name('admin.depoimento.index');
