@@ -18,6 +18,31 @@
               </div>
             </div>
             <!--end::Row-->
+
+            <!-- SUCESSO ALERTA -->
+             @if (session('sucesso'))
+               <div class="alert alert-success" role="alert">
+               <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                {{ session('sucesso'); }}
+                 A simple success alert—check it out!
+               </div>
+             @endif
+             
+             @if (session('erro'))
+               <!-- ERRO ALERTA -->
+               <div class="alert alert-danger" role="alert">
+               <i class="bi bi-exclamation-circle-fill" aria-hidden="true"></i>
+                {{ session('erro'); }}
+                A simple danger alert—check it out!
+               </div>
+             @endif
+
+
+
+
+
+
+            
           </div>
           <!--end::Container-->
         </div>
