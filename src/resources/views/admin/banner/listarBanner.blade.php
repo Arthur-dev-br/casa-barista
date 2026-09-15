@@ -237,7 +237,7 @@
                           id="new-banner-name"
                           placeholder="promoção de verão"
                           required
-                          name="titulo-banner"
+                          name="titulo_banner"
                         />
                       </div>
 
@@ -245,7 +245,7 @@
                       
                     
                         <label for="img-banner" class="form-label"> Selecione uma Imagem</label>
-                        <input type="file" class="form-control input-banner" id="img-banner" accept="image/*" required>
+                        <input type="file" class="form-control input-banner" id="img-banner" name="imagem_banner" accept="image/*" required>
                         
                       <label for="img-banner" class="banner-upload">
                        
@@ -261,17 +261,6 @@
                           <option value="ATIVO">ATIVO</option>
                           <option value="INATIVO">INATIVO</option>
                         </select>
-                      </div>
-                      <div class="form-check">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="new-user-welcome"
-                          checked
-                        />
-                        <label class="form-check-label" for="new-user-welcome">
-                          Send a welcome email with login details
-                        </label>
                       </div>
                     </div>
                     <div class="modal-footer">
