@@ -24,7 +24,6 @@
                <div class="alert alert-success" role="alert">
                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
                 {{ session('sucesso'); }}
-                 A simple success alert—check it out!
                </div>
              @endif
              
@@ -33,7 +32,7 @@
                <div class="alert alert-danger" role="alert">
                <i class="bi bi-exclamation-circle-fill" aria-hidden="true"></i>
                 {{ session('erro'); }}
-                A simple danger alert—check it out!
+              
                </div>
              @endif
 
@@ -589,6 +588,37 @@
 
 
 
+
+
+</script>
+
+
+<!-- alerta tempo da mensagem -->
+
+<script>
+
+  setTimeout(() => {
+   
+    
+
+    const alertas = document.querySelectorAll ('.alert');
+  
+      alertas.foreach(function(alerta){
+
+        const instancia = bootstrap.Alert.getInstance(alerta)
+
+        instancia.close();
+  
+  
+      });
+
+
+  }, 5000);
+
+
+
+
+  
 
 
 </script>
