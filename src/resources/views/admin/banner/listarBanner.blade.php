@@ -163,29 +163,31 @@
 
                             </td>
                             <td class="text-end">
-                              <div class="btn-group btn-group-sm">
-                                <!--EDITAR -->
-                                <button type="button" class="btn btn-outline-secondary"
+                                                    <div class="btn-group btn-group-sm">
 
-                                   data-bs-toggle="modal" data-bs-target="#modal-edit-banner"
-                                   data-id = "{{ $banner->id_banner }}"
-                                   data-titulo = "{{ $banner->titulo_banner }}"
-                                    data-status = "{{ $banner->status_banner }}"
-                                    data-image = "{{ asset('barista/assets/' . $banner->imagem_banner) }}"
-                                    data-url = "{{ route('admin.banner.status', $banner->id_banner) }}"
-                                    aria-label="Editar">
+                                                        <!-- editar -->
+                                                        <button type="button" class="btn btn-outline-secondary"
+                                                            data-bs-toggle="modal" data-bs-target="#modal-edit-banner"
+                                                            data-id="{{ $banner->id_banner }}"
+                                                            data-titulo="{{ $banner->titulo_banner }}"
+                                                            data-status="{{ $banner->status_banner }}"
+                                                            data-image="{{ asset('barista/assets/' . $banner->imagem_banner) }}"
+                                                            data-url="{{ route('admin.banner.status', $banner->id_banner) }}"
+                                                            aria-label="Editar">
 
-                                  <i class="bi bi-pencil" aria-hidden="true"> </i>
-                                </button>
+                                                            <i class="bi bi-pencil" aria-hidden="true"> </i>
+                                                        </button>
 
-                                 <!--DESATIVAR -->
+                                                        {{-- ATIVAR / DESATIVAR --}}
+                                                        <button type="button" class="btn btn-outline-danger"
+                                                            data-bs-toggle="modal" data-bs-target="#modal-delete-banner"
+                                                            aria-label="Deletar">
+                                                            <i class="bi bi-trash" aria-hidden="true"> </i>
+                                                        </button>
 
-                                <button type="button" class="btn btn-outline-danger"  aria-label="Delete">
-                                  <i class="bi bi-trash" aria-hidden="true"> </i>
 
-                                </button>
-                              </div>
-                            </td>
+                                                    </div>
+                                                </td>
                           </tr>
                           @empty
                           <tr>
@@ -318,86 +320,75 @@
 
             <!-- INICIO EDITAR MODAL -->
 
-             <div
-              class="modal fade"
-              id="modal-edit-banner"
-              tabindex="-1"
-              aria-labelledby="modal-add-banner-label"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
+             <div class="modal fade" id="modal-edit-banner" tabindex="-1" aria-labelledby="modal-add-banner-label"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
 
-                <!-- FORMA DE EDITAR-->
-                  <form id="form-edit-banner" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    @method('PUT')
-                    
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="modal-add-banner-label">Editar banner</h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
+                        <!-- FORM DE EDITAR -->
+                        <form id="form-edit-banner" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal-add-banner-label">Editar novo banner</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="mb-3">
+                                    <label for="edit-banner-titulo" class="form-label"> Título Banner </label>
+                                    <input type="text" class="form-control" id="edit-banner-titulo" required
+                                        name="titulo_banner" />
+                                </div>
+
+                                <div class="mb-3">
+
+                                    <label for="edit-banner-imagem" class="form-label"> Selecione uma imagem </label>
+
+                                    <input type="file" class="form-control input-banner" id="edit-banner-imagem"
+                                        name="imagem_banner" accept="image/*" required />
+
+                                    <label for="img-banner" class="banner-upload">
+
+                                        <img id="edit-banner-mostrar" src="" alt="banner">
+
+                                        <div class="banner-upload">
+                                            <i class="bi bi-image"></i>
+                                            <span>Deixe vazio para manter a imagem atual</span>
+                                        </div>
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="mb-3">
+                                    <label for="edit-banner-status" class="form-label"> Status </label>
+                                    <select id="edit-banner-status" class="form-select" name="status_banner">
+                                        <option value="ATIVO">Ativo</option>
+                                        <option value="INATIVO">Inativo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Cancelar
+                                </button>
+                                <button type="submit" class="btn btn-primary">Atualizar banner</button>
+                            </div>
+
+                        </form>
+                        <!-- FIM FORMA DE CADASTRO -->
                     </div>
-
-                    <div class="modal-body">
-
-                      <div class="mb-3">
-                        <label for="edit-banner-titulo" class="form-label"> Titulo banner</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="edit-banner-titulo"
-                          required
-                          name="titulo_banner"
-                        />
-                      </div>
-
-                      <div class="mb-3">
-                      
-                    
-                        <label for="edit-banner-imagem" class="form-label input-banner"> Selecione uma Imagem</label>
-
-                          <div class ="mb-3"> 
-
-                            <img id="edit-banner-imagem" src="" alt="banner">
-                                                
-                            <input type="file" class="form-control input-banner" id="edit-banner-imagem" name="imagem_banner" accept="image/*" required>
-                                                    
-                            <label for="img-banner" class="banner-upload">
-
-
-                          </div>
-
-
-                        
-                        </label>
-
-                      </div>
-                      
-                      <div class="mb-3">
-                        <label for="edit-banner-status" class="form-label"> Status </label>
-                        <select id="edit-banner-status" class="form-select" name="status_banner">
-                          <option value="ATIVO">ATIVO</option>
-                          <option value="INATIVO">INATIVO</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Cancelar
-                      </button>
-                      <button type="submit" class="btn btn-primary">Atualizar</button>
-                    </div>
-
-                  </form> 
-                  <!-- FIM DO FORMA CADASTRO -->
                 </div>
-              </div>
             </div>
+            <!-- FIM EDITAR MODAL -->
 
 
 
@@ -423,8 +414,7 @@
                   </div>
                   <div class="modal-body">
                     <p class="mb-0">
-                     Você tem certeza de que quer deletar este Banner? All content owned by the account
-                      will be reassigned to the site administrator. This action cannot be undone.
+                     Você tem certeza de que quer deletar este Banner?
                     </p>
                   </div>
                   <div class="modal-footer">
@@ -446,68 +436,72 @@
       </main>
       <!--end::App Main-->
 
-      
+
+      <!-- Carregando a foto do modal cadastrar -->
 <script>
     const inputBanner = document.getElementById('img-banner');
     const previewBanner = document.getElementById('ver-banner');
- 
+
     inputBanner.addEventListener('change', function() {
- 
+
         const arquivo = this.files[0];
- 
+
         if (arquivo) {
- 
+
             previewBanner.src = URL.createObjectURL(arquivo);
- 
+
         }
- 
+
     });
 </script>
 
 
 <script>
-  const modalEditarBanner = document.getElementById('modal-edit-banner');
-  const formEditBanner = document.getElementById('form-edit-banner');
-  const editId = document.getElementById('edit-banner-id');
-  const editTitulo = document.getElementById('edit-banner-titulo');
-  const editStatus = document.getElementById('edit-banner-status');
-  const editImagem = document.getElementById('edit-banner-imagem');
-  const editMostrar = document.getElementById('edit-banner-mostrar');
+    const modalEditarBanner = document.getElementById('modal-edit-banner');
+    const formEditBanner = document.getElementById('form-edit-banner');
+    const editId = document.getElementById('edit-banner-id');
+    const editTitulo = document.getElementById('edit-banner-titulo');
+    const editStatus = document.getElementById('edit-banner-status');
+    const editImagem = document.getElementById('edit-banner-imagem');
+    const editMostrar = document.getElementById('edit-banner-mostrar');
 
-  // carregar informações do modal
-  modalEditarBanner.addEventListener('show.bs.modal', function (event) {
-    const botao = event.relatedTarget;
-    const id = botao.getAttribute('data-id');
-    const titulo = botao.getAttribute('data-titulo');
-    const status = botao.getAttribute('data-status');
-    const imagem = botao.getAttribute('data-image');
-    const url = botao.getAttribute('data-url');
+    // Carregar as informações no modal
+    modalEditarBanner.addEventListener('show.bs.modal', function(event) {
 
-    // form action
-    formEditBanner.action = url;
+        const botao = event.relatedTarget;
 
-    // preencher campos do modal
-    editTitulo.value =   titulo;
-    editStatus.value =   status;
-    editMostrar.src   =   imagem;
+        const id = botao.getAttribute('data-id');
+        const titulo = botao.getAttribute('data-titulo');
+        const status = botao.getAttribute('data-status');
+        const image = botao.getAttribute('data-image');
+        const url = botao.getAttribute('data-url');
 
-    editImagem.value = '';
+        // Form Action
+        formEditBanner.action = url;
 
+        // Preencher
+        editTitulo.value = titulo;
+        editStatus.value = status;
+        editMostrar.src = image;
 
-    
-    
-  });
-  
-  // VER FOTO PARA EDITAR
+        //console.log(editMostrar.src);
 
-  editImagem.addEventListener('change', function() {
-    const arquivo = this.files[0];
+        editImagem.value = '';
 
-    if (arquivo) {
-        editMostrar.src = URL.createObjectURL(arquivo);
-    }
+    });
 
-  });
+    // VER FOTO PARA EDITAR
+    editImagem.addEventListener('change', function() {
+
+        const arquivo = this.files[0];
+
+        if (arquivo) {
+
+            editMostrar.src = URL.createObjectURL(arquivo);
+
+        }
+
+    });
 
 
 </script>
