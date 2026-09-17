@@ -72,6 +72,11 @@ p {
   max-height: none;
 }
 
+.btn-group {
+
+    gap: 10px;
+}
+
 
 
 

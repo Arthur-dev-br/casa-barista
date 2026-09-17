@@ -189,7 +189,7 @@
                                                                 title = "desativar banner"
                                                                 data-url = "{{ route('admin.banner.status', $banner->id_banner) }}"
                                                                 data-titulo = "{{ $banner->titulo_banner }}"
-                                                                data-status = "ATIVO" aria-label = "Desativar"
+                                                                data-status = "ATIVO" aria-label = "Ativar"
                                                                 >
                                                                
                                                                 <i class="bi bi-eye-fill" aria-hidden="true"> </i>
@@ -199,11 +199,11 @@
 
                                                               <button type="submit" class="btn btn-outline-danger"
                                                                 data-bs-toggle = "modal"
-                                                                data-bs-target = "#modal-delete-banner"
+                                                                data-bs-target = "#modal-status-banner"
                                                                 title = "ativar banner"
                                                                 data-url = "{{ route('admin.banner.status', $banner->id_banner) }}"
                                                                 data-titulo = "{{ $banner->titulo_banner }}"
-                                                                data-status = "ATIVO" aria-label = "Ativar"
+                                                                data-status = "INATIVO" aria-label = "Inativo"
                                                                 >
                                                                
                                                                 <i class="bi bi-eye-slash-fill" aria-hidden="true"> </i>
@@ -450,8 +450,8 @@
                       ></button>
                     </div>
 
-                  <div class="modal-body">
-                    <p class="mb-0">
+                  <div class="modal-body" id = "modal-status-banner">
+                    <p class="mb-0" id = "modal-status-banner-txt">
                       Você tem certeza de que quer alterar o status deste Banner?
                     </p>
                   </div>
@@ -460,7 +460,7 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                       Cancelar
                     </button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id = "modal-status-banner-btn">
                       Alterar Status
                     </button>
                   </div>
@@ -556,6 +556,39 @@
   const formStatusBanner = document.getElementById('form-status-banner');
   const tituloStatusBanner = document.getElementById('modal-status-banner-titulo');
   const txtStatusBanner = document.getElementById('modal-status-banner-txt');
+  const  btnStatusBanner = document.getElementById('modal-status-banner-btn');
+
+
+  modalStatusBanner .addEventListener('show.bs.modal', function(event) {
+
+    const botao = event.relatedTarget;
+
+      const url = botao.getAttribute('data-url');
+      const titulo = botao.getAttribute('data-titulo');
+      const status = botao.getAttribute('data-status');
+
+      // Form Action
+      formStatusBanner.action = url;
+
+      // Preencher
+      if (status === 'ATIVO') {
+        tituloStatusBanner.textContent = 'Desativar Banner';
+        txtStatusBanner.textContent = `Você tem certeza de que deseja desativar o banner?`;
+        btnStatusBanner.textContent = 'Desativar';
+
+        btnStatusBanner.className = 'btn btn-danger';
+
+      } else {
+        tituloStatusBanner.textContent = 'Ativar Banner';
+        txtStatusBanner.textContent = `Você tem certeza de que deseja ativar o banner?`;
+        btnStatusBanner.textContent = 'Ativar';
+
+        btnStatusBanner.className = 'btn btn-success';
+      }
+  });
+
+
+
 
 
 </script>
